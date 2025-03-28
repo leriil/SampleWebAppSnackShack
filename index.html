@@ -67,7 +67,56 @@
     }
 
     .buy-btn:hover {
-        background-color: #e8683d;
+    background-color: #e8683d;
+    }
+    
+    .form-section {
+    background-color: #fff;
+    margin: 2rem auto;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-section h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+    }
+
+    form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    }
+
+    form input, form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    }
+
+    form textarea {
+    resize: vertical;
+    min-height: 80px;
+    }
+
+    form button {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    }
+
+    form button:hover {
+    background-color: #e8683d;
     }
     </style>
     <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
@@ -109,12 +158,16 @@
             </div>
         </div>
     </div> 
-    <form id="form">
-        <input type="text" placeholder="Name" id="user_name">
-        <input type="text" placeholder="Email" id="user_email">
-        <input type="text" placeholder="Phone" id="user_phone">
-        <button id = "order">Order</button>
-    </form> 
+    <div class="form-section">
+        <h2>Complete Your Order</h2>
+        <form id="form">
+            <input type="text" placeholder="Name" id="user_name">
+            <input type="text" placeholder="Email" id="user_email">
+            <input type="text" placeholder="Phone" id="user_phone">
+            <button id = "order">Order</button>
+        </form>
+    </div>
+     
     <script>
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
